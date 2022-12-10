@@ -1,0 +1,104 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - SchoolMS.WEB</title>
+
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/SchoolMS.WEB.styles.css" asp-append-version="true" />
+    <link rel="icon" type="image/png" sizes="16x16" href="~/Temp/images/favicon.png" />
+    <!-- Pignose Calender -->
+    <link href="~/Temp/plugins/pg-calendar/css/pignose.calendar.min.css" rel="stylesheet" />
+    <!-- Chartist -->
+    <link rel="stylesheet" href="~/Temp/plugins/chartist/css/chartist.min.css" />
+    <link rel="stylesheet" href="~/Temp/plugins/chartist-plugin-tooltips/css/chartist-plugin-tooltip.css" />
+    <!-- Custom Stylesheet -->
+    <link href="~/Temp/css/style.css" rel="stylesheet" />
+</head>
+<body>
+
+
+    <!--*******************
+        Preloader start
+    ********************-->
+    <div id="preloader">
+        <div class="loader">
+            <svg class="circular" viewBox="25 25 50 50">
+                <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="3" stroke-miterlimit="10" />
+            </svg>
+        </div>
+    </div>
+    <!--*******************
+        Preloader end
+    ********************-->
+
+
+    <div class="nav-header">
+        <div class="brand-logo">
+            <a asp-area="" asp-controller="Home" asp-action="Index">
+                <b class="logo-abbr"><img src="~/Temp/images/logo.png" alt="" /> </b>
+                <span class="logo-compact"><img src="~/Temp/images/logo-compact.png" alt="" /></span>
+                <span class="brand-title">
+                    <img src="images/logo-text.png" alt="">
+                </span>
+            </a>
+        </div>
+    </div>
+
+
+
+
+    <partial name="_TopBar" />
+
+    <partial name="_sideBar" />
+
+    <div class="content-body">
+
+
+        <div class="container">
+            <main role="main" class="pb-3">
+                @RenderBody()
+            </main>
+        </div>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2022 - SchoolMS.WEB - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div>
+    </footer>
+    <!--**********************************
+        Scripts
+    ***********************************-->
+    <script src="~/Temp/plugins/common/common.min.js"></script>
+    <script src="~/Temp/js/custom.min.js"></script>
+    <script src="~/Temp/js/settings.js"></script>
+    <script src="~/Temp/js/gleek.js"></script>
+    <script src="~/Temp/js/styleSwitcher.js"></script>
+
+    <!-- Chartjs -->
+    <script src="~/Temp/plugins/chart.js/Chart.bundle.min.js"></script>
+    <!-- Circle progress -->
+    <script src="~/Temp/plugins/circle-progress/circle-progress.min.js"></script>
+    <!-- Datamap -->
+    <script src="~/Temp/plugins/d3v3/index.js"></script>
+    <script src="~/Temp/plugins/topojson/topojson.min.js"></script>
+    <script src="~/Temp/plugins/datamaps/datamaps.world.min.js"></script>
+    <!-- Morrisjs -->
+    <script src="~/Temp/plugins/raphael/raphael.min.js"></script>
+    <script src="~/Temp/plugins/morris/morris.min.js"></script>
+    <!-- Pignose Calender -->
+    <script src="~/Temp/plugins/moment/moment.min.js"></script>
+    <script src="~/Temp/plugins/pg-calendar/js/pignose.calendar.min.js"></script>
+    <!-- ChartistJS -->
+    <script src="~/Temp/plugins/chartist/js/chartist.min.js"></script>
+    <script src="~/Temp/plugins/chartist-plugin-tooltips/js/chartist-plugin-tooltip.min.js"></script>
+
+
+
+    <script src="~/Temp/js/dashboard/dashboard-1.js"></script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
